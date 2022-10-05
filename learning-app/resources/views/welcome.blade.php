@@ -24,7 +24,8 @@
     <body class="antialiased">
         <b style ='text-align: Right; color: blue'><a href = 'login' target = 'blank' >login here</a></b>
         <b><a href = 'learn'> Laravel Learning</a> </b>
-        <b><a href = 'about'> About Us</a> </b><br>
+        <b><a href = 'about'> About Us</a> </b><br><br>
+        <h1 style = 'color : red; text-align: center'><a href="blogs" target = 'blank'> Blogs </a></h1><br>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">

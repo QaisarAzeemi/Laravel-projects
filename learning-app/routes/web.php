@@ -7,6 +7,8 @@ use App\Http\controllers\DBController;
 use App\Http\controllers\UserDBController;
 use App\Http\controllers\uploadController;
 use App\Http\controllers\signUpController;
+use App\Http\controllers\BlogEntryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,15 +36,18 @@ Route::view('blockaccess','blockaccess');
 Route::view('signup','signups');
 Route::view('profile','profile');
 Route::view('app','app');
+Route::view('makeBlog','makeBlog');
 
 Route::post('upload',[uploadController::class, 'uploadPic']);
 Route::post('user',[userController::class, 'saveUser']);
 Route::post('signup',[signUpController::class, 'sUp']); 
+Route::post('makeBlog',[BlogEntryController::class, 'blogEntry']);
 
 Route::get('learning/{name}', [learning::class, 'index']); //routing the learning.php file in controller
 Route::get('weather', [DBController::class, 'db_manp']); //database controller
 Route::get('userdb', [UserDBController::class, 'getUsers']);
 Route::get('list', [UserController::class, 'fetchUser']);
+Route::get('blogs', [UserController::class, 'fetchBlog']);
 Route::get('delete/{Id}', [UserController::class, 'deleteUser']);
 Route::get('edit/{Id}', [UserController::class, 'editUser']);
 

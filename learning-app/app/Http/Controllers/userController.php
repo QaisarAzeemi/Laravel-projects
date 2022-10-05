@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Joining;
+use App\Models\blogentrie;
 
 class userController extends Controller
 {
@@ -24,6 +25,11 @@ class userController extends Controller
     function fetchUser(){
         $data = Joining::all();
         return view('userList',['users'=>$data]);
+    }
+
+    function fetchBlog(){
+        $blog = blogentrie::all();
+        return view('Blogs',['blogs'=>$blog]); //return view('page.blade.php',['key'=>variable])
     }
 
     function deleteUser($Id){

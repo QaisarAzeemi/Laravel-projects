@@ -4,7 +4,7 @@
     <title> User Profile </title>
 </head>
 <body style = 'background-color: lightgray'>
-<h2>User Profile</h2>
+<h2 style = 'color : blue'>User Profile</h2>
 <h3>Hello, {{session('name')}}</h3>
  your password is : {{session('pasword')}} <!-- not showing -->
 
@@ -14,6 +14,7 @@
  <button type = "Submit">Upload picture</button>
  <input type = "file" name = "pic"><br>
 </form>
+<h3><a href="blogs"> Blogs </a></h3>
  <a href="logout"> Logout </a>
     <!-- @if($errors->any())
        @foreach($errors->all() as $err)
