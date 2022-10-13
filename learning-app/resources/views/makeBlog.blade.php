@@ -1,6 +1,6 @@
 <body style = "text-align : Center; background-color: lightgrey">
 <h1 style = 'color: blue'>My Blog</h1>
-<form action='blogs', method='POST'>
+<form action='makeBlog', method='POST'>
         @csrf
          
         <legend for="title" >Title : </legend> <input type="text" id="title" placeholder = "Blog title" name="title"><br><br>

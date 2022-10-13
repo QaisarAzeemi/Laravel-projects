@@ -2,6 +2,7 @@
     
 <h1 style = 'color: blue ; background-color : yellow'> Users List</h1>
 <table border="1" style = 'background-color : orange'>
+
                 <tr>
                     <td>Name</td>
                     <td>Id</td>

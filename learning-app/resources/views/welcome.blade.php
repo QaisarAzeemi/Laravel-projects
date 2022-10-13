@@ -26,6 +26,11 @@
         <b><a href = 'learn'> Laravel Learning</a> </b>
         <b><a href = 'about'> About Us</a> </b><br><br>
         <h1 style = 'color : red; text-align: center'><a href="blogs" target = 'blank'> Blogs </a></h1><br>
+        <a href = "search" target="blank"><h2 Style="color:red">Search Blogs</h2></a>
+        <!-- <form action="getSingleBlog" method="POST">
+            
+            <label for="Id" > <h3>Enter blog Id</h3> </label> <input type="text" id="Id" placeholder = "Enter Id" name="Id"><br><br>
+        </form> -->
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
