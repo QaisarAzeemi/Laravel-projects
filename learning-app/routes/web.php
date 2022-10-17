@@ -8,7 +8,7 @@ use App\Http\controllers\UserDBController;
 use App\Http\controllers\uploadController;
 use App\Http\controllers\signUpController;
 use App\Http\controllers\BlogEntryController;
-
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,19 +37,38 @@ Route::view('signup','signups');
 Route::view('profile','profile');
 Route::view('app','app');
 Route::view('makeBlog','makeBlog');
+Route::view('search','search');
+Route::view('index','index');
+
 
 Route::post('upload',[uploadController::class, 'uploadPic']);
 Route::post('user',[userController::class, 'saveUser']);
 Route::post('signup',[signUpController::class, 'sUp']); 
 Route::post('makeBlog',[BlogEntryController::class, 'blogEntry']);
+// Route::post('search', [UserController::class, 'fetchSingleBlog']);
+
+Route::resource('posts', PostController::class);
 
 Route::get('learning/{name}', [learning::class, 'index']); //routing the learning.php file in controller
 Route::get('weather', [DBController::class, 'db_manp']); //database controller
 Route::get('userdb', [UserDBController::class, 'getUsers']);
 Route::get('list', [UserController::class, 'fetchUser']);
 Route::get('blogs', [UserController::class, 'fetchBlog']);
+//Route::get('search', [UserController::class, 'fetchSingleBlog']);
 Route::get('delete/{Id}', [UserController::class, 'deleteUser']);
 Route::get('edit/{Id}', [UserController::class, 'editUser']);
+// Route::get('search', function () {
+
+
+//     // Check for search input
+//     if (request('search')) {
+//         $blogs = blogentrie::where('Id', 'like', '%' . request('search') . '%')->get();
+//     } else {
+//         $blogs = blogentrie::all();
+//     }
+
+//     return view('search')->with('blogs', ＄blogs);
+//     });
 
 Route::get('/logout', function () {
     // return view('welcome');

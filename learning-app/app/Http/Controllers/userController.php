@@ -32,7 +32,14 @@ class userController extends Controller
         return view('Blogs',['blogs'=>$blog]); //return view('page.blade.php',['key'=>variable])
     }
 
-    function deleteUser($Id){
+    // function fetchSingleBlog($Id){
+      
+    //    $record = blogentrie::find($Id);//where('id',$Id)->first();
+    //    return $record;
+    // //    return view('Blogs',['blogs'=>$blog]); //return view('page.blade.php',['key'=>variable])
+    // }
+
+    function deleteUser(post $Id){
         $data = Joining::find($Id);
         $data->delete();
         return redirect('list');
@@ -41,4 +48,11 @@ class userController extends Controller
     // function editUser($Id){
     //     $Data = Joining::
     // }
+//     public function index()
+//     {
+//         $data = Joining::first()->get();
+      
+//         return view('userList',compact('data'))
+//                 ->with('i', (request()->input('page', 1) - 1) * 5);
+//     }
 }

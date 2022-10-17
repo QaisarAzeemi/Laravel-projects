@@ -13,6 +13,6 @@ class BlogEntryController extends Controller
         $bE->subject = $request->subject;
         $bE->description = $request->description;
         $bE->save();
-        return redirect('makeBlog');
+        return redirect('blogs');
     }
 }
